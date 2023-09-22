@@ -254,8 +254,8 @@
   position: relative;
   overflow: hidden;
 }
-@media (max-width:900px) and (min-width:768px) {
-  .products .product{
+@media (max-width: 900px) and (min-width: 768px) {
+  .products .product {
     max-width: 250px;
   }
 }
@@ -320,16 +320,46 @@
   -webkit-background-clip: text;
 }
 .about .about-content {
+  width: 100%;
   display: flex;
   justify-content: end;
-  gap: 50px;
+  gap: 30px;
   position: relative;
-  margin: 20px;
 }
-.about .imgs-side {
+
+@media (min-width: 1300px) {
+  .about .about-content {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.about .about-content .imgs-side {
   position: absolute;
-  top: 5px;
-  left: 60px;
+  left: 7%;
+  top: 0;
+}
+@media (min-width: 1300px) {
+  .about .about-content .imgs-side {
+    left: 15%;
+  }
+}
+@media (max-width: 1165px) {
+  .about .about-content .imgs-side {
+    left: 4%;
+  }
+}
+@media (max-width: 767px) {
+  .about .about-content .imgs-side {
+    left: 1%;
+  }
 }
 .about .imgs-side .box {
   background: linear-gradient(to right, #c72092, #6c14d0);
@@ -345,26 +375,43 @@
 .about .imgs-side .box img {
   height: 70px;
 }
+@media (max-width: 767px) {
+  .about .imgs-side .box img{
+    width: 60px;
+    height: 60px;
+  }
+}
 .about .image {
   box-shadow: 0 0 8px var(--second-color);
   border: 1px solid var(--second-color);
   padding: 10px;
   border-radius: 10px;
+  position: relative;
 }
 .about .image img {
   height: 300px;
+}
+@media (max-width: 767px) {
+  .about .image img {
+    height: 250px;
+    width: 250px;
+  }
 }
 .about .about-txt {
   box-shadow: 0 0 8px var(--main-color);
   border: 1px solid var(--main-color);
   padding: 10px;
   border-radius: 10px;
-  width: 500px;
+  max-width: 450px;
   margin-right: 50px;
   color: var(--second-color);
   font-size: 13px;
   line-height: 1.6;
-  /* padding: 5px; */
+}
+@media (max-width:767px) {
+  .about .about-txt{
+margin: 0 50px;
+  }
 }
 .about .shop-now {
   color: black;
